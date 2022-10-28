@@ -1,19 +1,15 @@
-import React, { useContext } from 'react';
 import { Button } from '@material-ui/core';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { makeStyles } from '@material-ui/core/styles';
+import React, { useContext } from 'react';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
-import './Landing.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
+import './Landing.css';
 
 import {
-    FaTwitter,
-    FaLinkedin,
-    FaGithub,
-    FaYoutube,
-    FaBlogger,
+    FaBlogger, FaGithub, FaLinkedin, FaTwitter, FaYoutube
 } from 'react-icons/fa';
 
 function Landing() {
@@ -142,7 +138,7 @@ function Landing() {
                         )}
                     </div>
                 </div>
-                <img
+                {/* <img
                     src={headerData.image}
                     alt=''
                     className='landing--img'
@@ -150,7 +146,7 @@ function Landing() {
                         opacity: `${drawerOpen ? '0' : '1'}`,
                         borderColor: theme.secondary,
                     }}
-                />
+                /> */}
                 <div
                     className='landing--container-right'
                     style={{ backgroundColor: theme.secondary }}

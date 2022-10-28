@@ -1,9 +1,8 @@
-import resume from '../assets/pdf/resume.pdf'
 
 export const headerData = {
-    name: 'Jane Doe',
+    name: 'SHAHARIYER',
     title: "Web Developer",
-    desciption:"There wasn't a bird in the sky, but that was not what caught her attention. It was the clouds. The deep green that isn't the color of clouds, but came with these. She knew what was coming and she hoped she was prepared. ",
-    image: 'https://raw.githubusercontent.com/PhantomScript/asset-container/main/developer-portfolio/landingImg.png',
-    resumePdf: resume
+    desciption:"Hello! I am SHAHARIYER AHAMMED, a professional and passionate programmer in my daily life. A quick learner with a self-learning attitude. I love to learn and explore new technologies and am Passionate about Problem Solving.",
+    image: '',
+    resumePdf: 'https://drive.google.com/file/d/1i5i4_fg7_UvkCWzuhHtTCkcN-dvt-IOF/view?usp=sharing'
 }
