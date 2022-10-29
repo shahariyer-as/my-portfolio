@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Fade from 'react-reveal/Fade';
 
-import placeholder from '../../../assets/png/placeholder.png'
-import './SingleBlog.css'
+import placeholder from '../../../assets/png/placeholder.png';
+import './SingleBlog.css';
 
 function SingleBlog({ theme, title, desc, date, image, url, id }) {
     return (
@@ -12,9 +12,9 @@ function SingleBlog({ theme, title, desc, date, image, url, id }) {
                     <img src={image ? image : placeholder} alt={title} />
                 </div>
                 <div className="singleBlog--body">
-                    <p style={{color: theme.tertiary}}>{date}</p>
-                    <h3 style={{color: theme.secondary}}>{title}</h3>
-                    <h6 style={{color: theme.secondary}}>{desc}</h6>
+                    <p style={{color: theme.primary}}>{date}</p>
+                    <h3 style={{color: theme.tertiary}}>{title}</h3>
+                    <h6 style={{color: theme.tertiary}}>{desc}</h6>
                 </div>
             </a>
         </Fade>

@@ -9,7 +9,7 @@ import { socialsData } from '../../data/socialsData';
 import './Landing.css';
 
 import {
-    FaBlogger, FaGithub, FaLinkedin, FaTwitter, FaYoutube
+    FaBlogger, FaFacebook, FaGithub, FaLinkedin, FaTwitter, FaYoutube
 } from 'react-icons/fa';
 
 function Landing() {
@@ -133,6 +133,19 @@ function Landing() {
                                     className='landing--social'
                                     style={{ color: theme.secondary }}
                                     aria-label='Blogger'
+                                />
+                            </a>
+                        )}
+                        {socialsData.facebook && (
+                            <a
+                                href={socialsData.facebook}
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <FaFacebook
+                                    className='landing--social facebook-icon'
+                                    style={{ color: theme.primary }}
+                                    aria-label='facebook'
                                 />
                             </a>
                         )}
