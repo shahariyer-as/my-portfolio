@@ -1,30 +1,21 @@
-import React, { useContext, useState } from "react";
-import { Snackbar, IconButton, SnackbarContent } from "@material-ui/core";
+import { IconButton, Snackbar, SnackbarContent } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import CloseIcon from "@material-ui/icons/Close";
 import axios from "axios";
-import isEmail from "validator/lib/isEmail";
-import { makeStyles } from "@material-ui/core/styles";
+import React, { useContext, useState } from "react";
+import { AiOutlineCheckCircle, AiOutlineSend } from "react-icons/ai";
 import {
-  FaTwitter,
-  FaLinkedinIn,
-  FaGithub,
-  FaYoutube,
-  FaBloggerB,
-  FaRedditAlien,
-  FaStackOverflow,
-  FaCodepen,
-  FaInstagram,
-  FaGitlab,
-  FaMediumM,
+  FaBloggerB, FaCodepen, FaGithub, FaGitlab, FaInstagram, FaLinkedinIn, FaMediumM, FaRedditAlien,
+  FaStackOverflow, FaTwitter, FaYoutube
 } from "react-icons/fa";
-import { AiOutlineSend, AiOutlineCheckCircle } from "react-icons/ai";
-import { FiPhone, FiAtSign } from "react-icons/fi";
+import { FiAtSign, FiPhone } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import isEmail from "validator/lib/isEmail";
 
 import { ThemeContext } from "../../contexts/ThemeContext";
 
-import { socialsData } from "../../data/socialsData";
 import { contactsData } from "../../data/contactsData";
+import { socialsData } from "../../data/socialsData";
 import "./Contacts.css";
 
 function Contacts() {
@@ -176,7 +167,7 @@ function Contacts() {
                   Name
                 </label>
                 <input
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   type="text"
@@ -189,7 +180,7 @@ function Contacts() {
                   Email
                 </label>
                 <input
-                  placeholder="John@doe.com"
+                  placeholder="Type your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
