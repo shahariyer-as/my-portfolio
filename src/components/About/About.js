@@ -3,7 +3,8 @@ import React, { useContext } from 'react';
 import codings from '../../assets/lottie/coding.json';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { aboutData } from '../../data/aboutData';
-import AnimationLottie from '../Skills/Animation';
+import AnimationLottie from '../Animation';
+
 
 import './About.css';
 
