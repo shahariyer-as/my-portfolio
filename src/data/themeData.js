@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { theDarkTheme } from '../theme/theme'
+// import { theDarkTheme } from '../theme/theme'
 
 /* eslint-disable */
 // import { 
@@ -7,9 +7,16 @@ import { theDarkTheme } from '../theme/theme'
 // } from '../theme/theme'
 // // 
 
-export const themeData = {
-    theme: theDarkTheme
-}
+// export const themeData = {
+//     theme: theDarkTheme
+// }
 
 
 // Choose theme from above
+/* eslint-disable */
+import { theLightTheme } from '../theme/theme'
+
+
+export const themeData = {
+    theme: theLightTheme
+}

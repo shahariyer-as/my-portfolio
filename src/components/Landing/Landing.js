@@ -13,7 +13,7 @@ import {
 } from 'react-icons/fa';
 
 function Landing() {
-    const { theme, drawerOpen } = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
 
     const useStyles = makeStyles((t) => ({
         resumeBtn: {

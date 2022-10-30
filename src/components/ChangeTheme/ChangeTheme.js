@@ -1,6 +1,8 @@
 import { makeStyles } from '@material-ui/core';
 import React, { useContext } from 'react';
 import { BsFillBrightnessHighFill } from 'react-icons/bs';
+import { ImContrast } from "react-icons/im";
+
 import { ThemeContext } from '../../contexts/ThemeContext';
 import './ChangeTheme.css';
 
@@ -28,7 +30,7 @@ const ChangeTheme = () => {
         {isDark ?
           <BsFillBrightnessHighFill className={classes.icon} />
           :
-          <BsFillBrightnessHighFill className={classes.icon} />
+          <ImContrast className={classes.icon} />
         }
       </button>
     </div>
