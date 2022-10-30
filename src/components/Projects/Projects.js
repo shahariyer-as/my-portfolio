@@ -1,41 +1,41 @@
-import React,{ useContext} from 'react';
-import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
-import { ThemeContext } from '../../contexts/ThemeContext';
-import { projectsData } from '../../data/projectsData'
 import { HiArrowRight } from "react-icons/hi";
+import { ThemeContext } from '../../contexts/ThemeContext';
+import { projectsData } from '../../data/projectsData';
 
-import './Projects.css'
+import './Projects.css';
 import SingleProject from './SingleProject/SingleProject';
 
 function Projects() {
 
     const { theme } = useContext(ThemeContext);
 
-    
+
     const useStyles = makeStyles(() => ({
-        viewAllBtn : {
-            color: theme.tertiary, 
-            backgroundColor: theme.primary,
-            transition: 'color 0.2s',
+        viewAllBtn: {
+            color: theme.secondary,
+            backgroundColor: theme.buttonColor,
+            transition: 'color 0.5s',
             "&:hover": {
-                color: theme.secondary, 
+                color: theme.secondary,
                 backgroundColor: theme.primary,
             }
         },
-        viewArr : {
-            color: theme.tertiary, 
-            backgroundColor: theme.secondary70,
+        viewArr: {
+            color: theme.buttonColor,
+            backgroundColor: theme.secondary,
             width: '40px',
             height: '40px',
             padding: '0.5rem',
             fontSize: '1.05rem',
             borderRadius: '50%',
             cursor: 'pointer',
-            transition: 'background-color 0.2s',
+            transition: 'background-color 0.5s',
             "&:hover": {
-                color: theme.tertiary, 
+                color: theme.buttonColor,
                 backgroundColor: theme.secondary,
             }
         },
@@ -46,9 +46,9 @@ function Projects() {
     return (
         <>
             {projectsData.length > 0 && (
-                <div className="projects" id="projects" style={{backgroundColor: theme.secondary}}>
+                <div className="projects" id="projects" style={{ backgroundColor: theme.secondary }}>
                     <div className="projects--header">
-                        <h1 style={{color: theme.primary}}>Projects</h1>
+                        <h1 style={{ color: theme.primary }}>Projects</h1>
                     </div>
                     <div className="projects--body">
                         <div className="projects--bodyContainer">
@@ -65,7 +65,7 @@ function Projects() {
                                     image={project.image}
                                 />
                             ))}
-                        </div> 
+                        </div>
 
                         {projectsData.length > 3 && (
                             <div className="projects--viewAll">

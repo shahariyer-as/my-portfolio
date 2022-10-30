@@ -1,6 +1,6 @@
-import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { FaPlay, FaCode } from 'react-icons/fa';
+import React from 'react';
+import { FaCode, FaPlay } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 
 import placeholder from '../../../assets/png/placeholder.png';
@@ -39,7 +39,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
             <div
                 key={id}
                 className='singleProject'
-                style={{ backgroundColor: theme.primary400 }}
+                style={{ backgroundColor: theme.quaternary }}
             >
                 <div className='projectContent'>
                     <h2
@@ -103,7 +103,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                     className='project--lang'
                     style={{
                         background: theme.secondary,
-                        color: theme.tertiary80,
+                        color: theme.tertiary,
                     }}
                 >
                     {tags.map((tag, id) => (

@@ -2,14 +2,14 @@ import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import React, { useContext } from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
-
+import Typed from 'react-typed';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
 import './Landing.css';
 
 import {
-    FaBlogger, FaFacebook, FaGithub, FaLinkedin, FaTwitter, FaYoutube
+    FaFacebook, FaGithub, FaLinkedin, FaTwitter
 } from 'react-icons/fa';
 
 function Landing() {
@@ -29,9 +29,9 @@ function Landing() {
             border: `3px solid ${theme.primary}`,
             transition: '100ms ease-out',
             '&:hover': {
-                backgroundColor: theme.tertiary,
+                backgroundColor: theme.buttonColor,
                 color: theme.secondary,
-                border: `3px solid ${theme.tertiary}`,
+                border: `3px solid ${theme.buttonColor}`,
             },
             [t.breakpoints.down('sm')]: {
                 width: '180px',
@@ -51,9 +51,9 @@ function Landing() {
             border: `3px solid ${theme.primary}`,
             transition: '100ms ease-out',
             '&:hover': {
-                backgroundColor: theme.secondary,
-                color: theme.tertiary,
-                border: `3px solid ${theme.tertiary}`,
+                backgroundColor: theme.buttonColor,
+                color: theme.secondary,
+                border: `3px solid ${theme.buttonColor}`,
             },
             [t.breakpoints.down('sm')]: {
                 display: 'none',
@@ -64,11 +64,11 @@ function Landing() {
     const classes = useStyles();
 
     return (
-        <div className='landing'>
+        <div className='landing' style={{ backgroundColor: theme.quaternary }}>
             <div className='landing--container'>
                 <div
                     className='landing--container-left'
-                    style={{ backgroundColor: theme.primary }}
+                    style={{ backgroundColor: theme.quaternary }}
                 >
                     <div className='lcl--content'>
                         {socialsData.linkedIn && (
@@ -78,8 +78,8 @@ function Landing() {
                                 rel='noreferrer'
                             >
                                 <FaLinkedin
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
+                                    className='landing--social linkedin-icon'
+                                    style={{ color: theme.primary }}
                                     aria-label='LinkedIn'
                                 />
                             </a>
@@ -92,7 +92,7 @@ function Landing() {
                             >
                                 <FaGithub
                                     className='landing--social'
-                                    style={{ color: theme.secondary }}
+                                    style={{ color: theme.primary }}
                                     aria-label='GitHub'
                                 />
                             </a>
@@ -104,35 +104,9 @@ function Landing() {
                                 rel='noreferrer'
                             >
                                 <FaTwitter
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
+                                    className='landing--social twitter-icon'
+                                    style={{ color: theme.primary }}
                                     aria-label='Twitter'
-                                />
-                            </a>
-                        )}
-                        {socialsData.youtube && (
-                            <a
-                                href={socialsData.youtube}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaYoutube
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='YouTube'
-                                />
-                            </a>
-                        )}
-                        {socialsData.blogger && (
-                            <a
-                                href={socialsData.blogger}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaBlogger
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Blogger'
                                 />
                             </a>
                         )}
@@ -157,7 +131,7 @@ function Landing() {
                     className='landing--img'
                     style={{
                         opacity: `${drawerOpen ? '0' : '1'}`,
-                        borderColor: theme.secondary,
+                        borderColor: theme.primary,
                     }}
                 /> */}
                 <div
@@ -168,8 +142,19 @@ function Landing() {
                         className='lcr--content'
                         style={{ color: theme.tertiary }}
                     >
-                        <h6>{headerData.title}</h6>
+                        {/* <h6 style={{ color: theme.primary }}>{headerData.title}</h6> */}
                         <h1>{headerData.name}</h1>
+                        <Typed
+                            strings={[
+                                'Backend Developer',
+                                'Frontend Developer',
+                                'Fullstack Developer']}
+                            typeSpeed={40}
+                            backSpeed={50}
+                            className="typed-header"
+                            style={{ color: theme.primary, fontSize: '20px' }}
+                            loop
+                        />
                         <p>{headerData.desciption}</p>
 
                         <div className='lcr-buttonContainer'>
