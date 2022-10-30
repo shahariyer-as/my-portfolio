@@ -1,7 +1,7 @@
 .single-service {
   box-shadow: 4px 4px 8px rgba(36, 3, 3, 0.2);
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 240px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
 
 .service-content {
   position: relative;
-  height: 150px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +83,7 @@
   font-family: var(--primaryFont);
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
   line-height: 110%;
   color: #000000;
